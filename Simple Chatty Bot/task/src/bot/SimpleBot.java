@@ -45,11 +45,19 @@ public class SimpleBot {
                 String str = scanner.nextLine();
                 if (str.equals("exit"))
                     System.exit(0);
-                return Integer.parseInt(str);
+                return checkNegative(Integer.parseInt(str));
             } catch (NumberFormatException e) {
                 System.out.println("You should enter numbers!");
             }
         }
+    }
+
+    static int  checkNegative(int num) {
+        while (num < 0) {
+            System.out.println("You should enter positive numbers!");
+            num = inputInteger();
+        }
+        return num;
     }
 
     static void count() {
