@@ -7,6 +7,8 @@ Please, remind me your name.
 What a great name you have, Max!
 Let me guess your age.
 Enter remainders of dividing your age by 3, 5 and 7.
+> -1
+You should enter positive numbers!
 > 0
 > 4
 > 3
