@@ -3,10 +3,10 @@ package bot;
 import java.util.Scanner;
 
 public class SimpleBot {
-    final static Scanner scanner = new Scanner(System.in); // Do not change this line
+    final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        greet("Aid", "2018"); // change it as you need
+        greet("Aid", "2018");
         remindName();
         guessAge();
         count();
@@ -29,20 +29,32 @@ public class SimpleBot {
     static void guessAge() {
         System.out.println("Let me guess your age.");
         System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
-        System.out.print("> ");
-        int rem3 = scanner.nextInt();
-        System.out.print("> ");
-        int rem5 = scanner.nextInt();
-        System.out.print("> ");
-        int rem7 = scanner.nextInt();
+
+        int rem3 = inputInteger();
+        int rem5 = inputInteger();
+        int rem7 = inputInteger();
         int age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
+
         System.out.println("Your age is " + age + "; that's a good time to start programming!");
+    }
+
+    static int  inputInteger() {
+        while (true) {
+            try {
+                System.out.print("> ");
+                String str = scanner.nextLine();
+                if (str.equals("exit"))
+                    System.exit(0);
+                return Integer.parseInt(str);
+            } catch (NumberFormatException e) {
+                System.out.println("You should enter numbers!");
+            }
+        }
     }
 
     static void count() {
         System.out.println("Now I will prove to you that I can count to any number you want.");
-        System.out.print("> ");
-        int num = scanner.nextInt();
+        int num = inputInteger();
         for (int i = 0; i <= num; i++) {
             System.out.printf("%d!\n", i);
         }
@@ -55,16 +67,14 @@ public class SimpleBot {
         System.out.println("2. To decompose a program into several small subroutines.");
         System.out.println("3. To determine the execution time of a program.");
         System.out.println("4. To interrupt the execution of a program.");
-        System.out.print("> ");
-        int answer = scanner.nextInt();
+        int answer = inputInteger();
         while (answer != 2) {
             System.out.println("Please, try again.");
-            System.out.print("> ");
-            answer = scanner.nextInt();
+            answer = inputInteger();
         }
     }
 
     static void end() {
-        System.out.println("Congratulations, have a nice day!"); // Do not change this text
+        System.out.println("Congratulations, have a nice day!");
     }
 }
