@@ -12,6 +12,8 @@ Enter remainders of dividing your age by 3, 5 and 7.
 > 3
 Your age is 24; that's a good time to start programming!
 Now I will prove to you that I can count to any number you want.
+> five
+You should enter numbers!
 > 5
 0!
 1!
