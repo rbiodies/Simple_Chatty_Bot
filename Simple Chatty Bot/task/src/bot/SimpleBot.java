@@ -6,7 +6,7 @@ public class SimpleBot {
     final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        greet("Aid", "2018");
+        greet("Aid", "2022");
         remindName();
         guessAge();
         count();
@@ -35,7 +35,7 @@ public class SimpleBot {
         int rem7 = inputInteger();
         int age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
 
-        System.out.println("Your age is " + age + "; that's a good time to start programming!");
+        System.out.printf("Your age is %d; that's a good time to start programming!\n", age);
     }
 
     static int  inputInteger() {
@@ -47,7 +47,7 @@ public class SimpleBot {
                     System.exit(0);
                 return checkNegative(Integer.parseInt(str));
             } catch (NumberFormatException e) {
-                System.out.println("You should enter numbers!");
+                System.out.println("You should enter number!");
             }
         }
     }
