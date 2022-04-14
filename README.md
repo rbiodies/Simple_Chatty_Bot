@@ -34,4 +34,7 @@ Why do we use methods?
 Please, try again.
 > 2
 Congratulations, have a nice day!
+
+
+Process finished with exit code 0
 ```
